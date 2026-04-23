@@ -1,0 +1,46 @@
+body {
+    background-color: #0f0f0f;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+h1 {
+    color: #00e676;
+    margin-bottom: 30px;
+}
+
+.shift-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-left: 5px solid #00e676;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+button[value="accept"] {
+    background-color: #00e676;
+    color: black;
+}
+
+button[value="reject"] {
+    background-color: #ff1744;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}

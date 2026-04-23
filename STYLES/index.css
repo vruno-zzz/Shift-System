@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #F5E6D3, #EAD7C3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #4B2E2E;
+}
+
+.hero {
+    max-width: 700px;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #A47551;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #5E3A3A;
+}
+
+.title {
+    font-size: 52px;
+    font-weight: 700;
+    color: #A47551;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    color: #5E3A3A;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+/* Botón principal */
+.primary {
+    background-color: #A47551;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #6B8E23;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Botón secundario */
+.secondary {
+    border: 2px solid #A47551;
+    color: #A47551;
+}
+
+.secondary:hover {
+    background-color: #A47551;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}

@@ -1,0 +1,328 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f5eee6, #e8d8c3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.container {
+    width: 1100px;
+    height: 650px;
+    background: #f8f6f3;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 120px 1fr;
+    overflow: hidden;
+}
+
+/* === PARTE SUPERIOR === */
+
+.top-left {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    border-bottom: 1px solid #e0d6cc;
+}
+
+.top-left h1 {
+    font-size: 28px;
+    color: #5e3a3a;
+}
+
+.top-right {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #e0d6cc;
+    border-bottom: 1px solid #e0d6cc;
+}
+
+/* Avatar moderno */
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a47551, #8b5e3c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Cabeza */
+.avatar::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+}
+
+/* Cuerpo */
+.avatar::after {
+    content: "";
+    width: 50px;
+    height: 30px;
+    background: white;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    bottom: 18px;
+}
+
+/* === PARTE INFERIOR === */
+
+.bottom-left {
+    padding: 40px;
+    background: #f8f6f3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Botones modernos */
+.btn {
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: #a47551;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(164, 117, 81, 0.2);
+}
+
+.btn:hover {
+    background-color: #8b5e3c;
+    transform: translateY(-3px);
+}
+
+/* Sección derecha */
+.bottom-right {
+    padding: 40px;
+    background: #ffffff;
+    border-left: 1px solid #e0d6cc;
+}
+
+.bottom-right h3 {
+    color: #5e3a3a;
+    margin-bottom: 20px;
+}
+
+/* Card de turnos */
+.turno-card {
+    background: #f2f0ed;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border-left: 5px solid #a47551;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.turno-card p {
+    font-size: 14px;
+    color: #555;
+}
+/* ================= MODAL ================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 600px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.modal-content h2 {
+    color: #5e3a3a;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-btn:hover {
+    color: #5e3a3a;
+}
+
+/* Calendario */
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header button {
+    background: #a47551;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.calendar div {
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    background: #f2f0ed;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calendar div.active:hover {
+    background: #d8c3b3;
+}
+
+.calendar div.disabled {
+    background: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.calendar div.selected {
+    background: #a47551;
+    color: white;
+}
+
+/* Hora */
+
+.time-section {
+    margin-bottom: 20px;
+}
+
+.time-section select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Descripción */
+
+.desc-section textarea {
+    width: 100%;
+    height: 90px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    resize: none;
+    margin-top: 5px;
+}
+
+.desc-section small {
+    display: block;
+    text-align: right;
+    color: #777;
+    margin-top: 5px;
+}
+
+.confirm-btn {
+    width: 100%;
+    margin-top: 15px;
+}
+/* ================= DETALLES TURNOS ================= */
+
+.details-content {
+    width: 500px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.details-content h2 {
+    color: #5e3a3a;
+    margin-bottom: 20px;
+}
+
+.shift-card {
+    background: #f2f0ed;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border-left: 6px solid #a47551;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.shift-card p {
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* Estados */
+
+.status {
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+/* Pendiente */
+.status.Pendiente {
+    background: #e8d8c3;
+    color: #5e3a3a;
+}
+
+/* Aceptado */
+.status.Aceptado {
+    background: #d4edda;
+    color: #2e7d32;
+}
+
+/* Rechazado */
+.status.Rechazado {
+    background: #f8d7da;
+    color: #c62828;
+}
+.bottom-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
